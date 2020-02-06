@@ -38,7 +38,7 @@
     }
 }
 .listing {
-    margin-top: -80px;
+    margin-top: -100px;
     position: relative;
     float: left;
     clear: both;
@@ -134,6 +134,31 @@
                 .post__description {
                     font-size: 18px;
                     padding: 2px 5px;
+                }
+                .post__publish {
+                    position: absolute;
+                    bottom: 0px;
+                    right: 0px;
+                    margin-right: 1em;
+                    margin-bottom: 1em;
+                    p {
+                        margin: 0;
+                        padding: 0;
+                    }       
+                    .author__image {
+                        width: 45px;
+                        height: 45px;
+                        border-radius: 50%;
+                        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+                   
+                    }
+                    .author__name {
+                        font-size: 1.5em;
+                        margin-right: 0.2em;
+                    }
+                    .post__author {
+                    margin-bottom: 0;
+                    }
                 }
             }
         }

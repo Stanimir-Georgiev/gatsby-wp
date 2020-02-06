@@ -26,31 +26,39 @@ export default ({ data }) => {
             if (node.featured_media !== null) {
               fixed = node.featured_media.localFile.childImageSharp.fixed
             }
-              return (
-                <article className="post" key={node.slug}>
-                  <Link to={node.slug}>
-                    <div className="post__image-wrapper">
-                      <div className="post__image">
-                        {fixed && <Img fixed={fixed} />}
-                      </div>
+            return (
+              <article className="post" key={node.slug}>
+                <Link to={node.slug}>
+                  <div className="post__image-wrapper">
+                    <div className="post__image">
+                      {fixed && <Img fixed={fixed} />}
                     </div>
-                    <div className="post__content-wrapper">
-                      <div className="post__content">
-                        <h2 className="post__title">{node.title}</h2>
-                        <div className="post__category">
-                          {node.categories.map(({name}) => {
-                            return (
+                  </div>
+                  <div className="post__content-wrapper">
+                    <div className="post__content">
+                      <h2 className="post__title">{node.title}</h2>
+                      <div className="post__category">
+                        {node.categories.map(({ name }) => {
+                          return (
                             <span>{name}</span>
-                            )
-                          })}
-                        </div>
+                          )
+                        })}
+                      </div>
+                      <p className="post__description" dangerouslySetInnerHTML={{ __html: node.excerpt }} ></p>
+                      <div className="post__publish">
+            
+                          <p className="post__date">{node.date}</p>
+                          <p className="post__author">
+                            <span className="author__name">{node.author.name}</span>
+                            <img src={node.author.avatar_urls.wordpress_24} className="author__image"></img>
+                          </p>
                         
-                        <p className="post__description" dangerouslySetInnerHTML={{ __html: node.excerpt }} ></p>
                       </div>
                     </div>
-                  </Link>
-                </article>
-              )
+                  </div>
+                </Link>
+              </article>
+            )
           })}
         </div>
       </section>
@@ -79,6 +87,13 @@ export const pageQuery = graphql`
           }
           categories {
             name
+          }
+          date(formatString: "DD-MM-YYYY")
+          author {
+            name
+            avatar_urls {
+              wordpress_24
+            }
           }
         }
       }

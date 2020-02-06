@@ -3,12 +3,35 @@
     margin: 0 auto;
     div {
         padding: 2em 4em 1em 4em;
+        display: inline-block;
     }
     h1 {
         font-size: 2em;
         a {
             text-decoration: none;
             color: #6598d1;
+        }
+    }
+    .page-navigation {
+        display: inline-block;
+        margin-left: 3em;
+        ul {
+            li {
+                &:nth-child(1) {
+                    margin-left: 0;
+                }
+                display: inline-block;
+                margin-left: 1.5em;
+                a {
+                   text-decoration: none; 
+                   font-size: 1.1em;
+                   font-family: 'Lacquer', sans-serif;
+                   color: purple;
+                   &:hover {
+                       color: red;
+                   }
+                }
+            }
         }
     }
 }
