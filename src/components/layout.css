@@ -1,13 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,700i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lacquer&display=swap');
+
+
 html {
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
 }
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: inherit;
+  font: inherit;
 }
+
 article,
 aside,
 details,
@@ -200,7 +210,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -614,6 +624,11 @@ pre code:after,
 pre tt:before,
 pre tt:after {
   content: "";
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lacquer', sans-serif;
+  line-height: 0;
+
 }
 @media only screen and (max-width: 480px) {
   html {

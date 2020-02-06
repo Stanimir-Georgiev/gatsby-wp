@@ -1,0 +1,141 @@
+.headings {
+    position: relative;
+    display: block;
+    padding: 160px 0 190px;
+    .headings-image {
+        background-image: url("https://c0.wallpaperflare.com/preview/639/306/330/aerial-background-blog-cafe.jpg");
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .headings-image-overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(19, 41, 48, 0.8);
+    }
+    .wrap {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1em 4em; 
+        h1 {
+            color: white;
+            font-size: 60px;
+            margin-bottom: 1.5em;
+        }
+        p {
+            color: white;
+            font-size: 30px;
+        }
+    }
+}
+.listing {
+    margin-top: -80px;
+    position: relative;
+    float: left;
+    clear: both;
+    width: 100%;
+    .wrapper {
+        max-width: 1100px;
+        position: relative;
+        margin: 0 auto;
+    }
+    .post {
+        position: relative;
+        float: left;
+        clear: both;
+        width: 100%;
+        margin-top: 60px;
+        &:nth-child(2n) {
+            .post__image-wrapper {
+                left: auto;
+                right: 0;
+            }
+            .post__content-wrapper {
+                float: left;
+                padding: 30px 0 30px 30px;
+                .post__content {
+                    margin: 0 -30px 0 0;
+                }
+            }
+            
+        }
+        cursor: pointer;
+        &:first-child {
+            margin-top: 0;
+        }
+        .post__image-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 50%;
+            height: auto;
+            padding-bottom: 0;
+            overflow: hidden;
+            .post__image {
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        .post__content-wrapper {
+            float: right;
+            padding: 30px 30px 30px 0;
+            width: 50%;
+            background: #f4f5f6;
+            .post__content {
+                margin: 0 0 0 -30px;
+                min-height: 400px;
+                padding: 30px;
+                background: white;
+                position: relative;
+                border-radius: 0.5em;
+                color: black;
+                .post__title {
+                    font-size: 35px;
+                    padding: 5px;
+                    margin-bottom: 1em;
+                    color: #6598d1;
+                }
+                .post__category {
+                    font-size: 20px;
+                    padding: 2px 5px;
+                    margin-bottom: 1em;
+                    span {
+                        padding: 0.3em;
+                        background: orange;
+                        margin-right: 0.5em;
+                        border-radius: 0.5em;
+                        color: white;
+                    }
+                }
+                .post__description {
+                    font-size: 18px;
+                    padding: 2px 5px;
+                }
+            }
+        }
+    }
+}
