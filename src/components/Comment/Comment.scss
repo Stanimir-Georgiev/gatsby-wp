@@ -1,0 +1,34 @@
+.comment {
+    list-style: none outside;
+    .comment__wrapper {
+        .comment__author {
+            img {
+                width: 75px;
+                height: 75px;
+                float: left;
+                display: block;
+            }
+            .comment__date__author {
+                padding: 1em;
+                margin-left: 4em;
+                &::after {
+                    display: block;
+                    content: '';
+                    clear: both;
+                }
+                .author__name {
+                    font-size: 1.4em;
+                    color: purple;
+                }
+                .comment__date {
+                    font-size: 1.2em;
+                    color: gray;
+                }
+                
+            }
+        }
+        .comment__content {
+
+        }
+    }
+}

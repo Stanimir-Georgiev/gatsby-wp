@@ -62,34 +62,46 @@
             padding: 70px 80px;
             box-shadow: 0 14px 26px rgba(0,0,0,.05);
             h2 {
-
-            }
-            div {
-
+                font-size: 2em;
             }
             .single__post__publish {
-                text-align: right;
-                margin: 1em;
-                
-                p {
-                    margin: 0;
-                    padding: 0;
-                }       
-                .single__author__image {
-                    width: 45px;
-                    height: 45px;
-                    border-radius: 50%;
-                    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-               
+               margin-top: 2em;
+                &::after {
+                    display: block;
+                    content: '';
+                    clear: both;
                 }
-                .single__author__name {
-                    font-size: 1.5em;
-                    margin-right: 0.2em;
+                .single__date__author {
+                   float: right;
+                   padding: 1em;
+
+                }
+                .single__post__date {
+                    font-size: 1.4em;
+                    color: gray;
                 }
                 .single__post__author {
-                margin-bottom: 0;
+                    font-size: 1.2em;
+                    text-align: right;
+                    color: purple;
+                    
+                }
+                .single__author__image {
+                    display: block;
+                    width: 75px;
+                    height: 75px;
+                    float: right;
                 }
             }
+        }
+    }
+    .comment__section {
+        margin-top: 1em;
+        h2 {
+            margin-bottom: 2em;
+        }
+        ul {
+            margin: 0;
         }
     }
 }

@@ -10,6 +10,7 @@ exports.createPages = ({ graphql, actions }) => {
           title
           excerpt
           slug
+          wordpress_id
           featured_media {
             localFile {
               childImageSharp {
@@ -41,11 +42,13 @@ exports.createPages = ({ graphql, actions }) => {
   `).then(result => {
 
     result.data.allWordpressPost.edges.forEach(({ node }) => {
+      
       createPage({
         path: node.slug,
         component: path.resolve(`./src/templates/blog-post.js`),
         context: {
           slug: node.slug,
+          postId: node.wordpress_id
         },
       })
     })
