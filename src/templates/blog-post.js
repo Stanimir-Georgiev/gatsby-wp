@@ -18,6 +18,7 @@ export default ({ data }) => {
       <div>
         <section className="post__headings">
           <div className="post__headings-image">
+            <Img fixed={fixed} objectFit="cover"></Img>
             <div className="post__headings-image-overlay"></div>
           </div>
           <div className="post__wrap">
@@ -44,7 +45,7 @@ export default ({ data }) => {
                   <p className="single__post__date">{post.date}</p>
                 </div>
               </div>
-              {comments &&
+              {comments.edges.length > 0 &&
                 <section className="comment__section">
                   <h2>Comment Section</h2>
                   <ul>
@@ -75,7 +76,7 @@ export const query = graphql`
           featured_media{
             localFile{
               childImageSharp{
-                fixed(width:940, height:500){
+                fixed(width:940, height:540){
                   src
                   width
                   height
