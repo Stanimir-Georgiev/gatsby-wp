@@ -6,7 +6,7 @@ const Comment = ({authorImage, authorName, commentDate, commentContent}) => {
         <li className="comment">
             <div className="comment__wrapper">
                 <div className="comment__author">
-                    <img src={authorImage} />
+                    <img src={authorImage} alt="author"/>
                     <div className="comment__date__author">
                         <h6 className="author__name">{authorName}</h6>
                         <p className="comment__date">{commentDate}</p>

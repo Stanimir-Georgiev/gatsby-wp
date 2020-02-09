@@ -29,7 +29,7 @@ const Header = ({ siteTitle }) => {
         <ul>
           {data.allWordpressPage.edges.map(({ node }) => {
             return (
-              <li>
+              <li key={node.slug}>
                 <Link to={node.slug}>{node.title}</Link>
               </li>
             )

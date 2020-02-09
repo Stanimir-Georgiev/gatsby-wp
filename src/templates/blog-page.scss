@@ -1,0 +1,16 @@
+.blog__page {
+    .page__wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2em 4em;
+        .page__heading {
+            color: purple;
+            margin-bottom: 1em;
+        }
+        .page__content {
+            min-height: 230px;
+            color: gray;
+        }
+    }
+   
+}

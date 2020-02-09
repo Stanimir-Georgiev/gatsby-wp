@@ -8,7 +8,6 @@ import Comment from '../components/Comment/Comment'
 export default ({ data }) => {
   const post = data.allWordpressPost.edges[0].node
   const comments = data.allWordpressWpComments;
-  console.log(comments)
   let fixed = {}
   if (post.featured_media !== null) {
     fixed = post.featured_media.localFile.childImageSharp.fixed
@@ -18,7 +17,7 @@ export default ({ data }) => {
       <div>
         <section className="post__headings">
           <div className="post__headings-image">
-            <Img fixed={fixed} objectFit="cover"></Img>
+            <Img fixed={fixed} objectFit="cover" alt="image"></Img>
             <div className="post__headings-image-overlay"></div>
           </div>
           <div className="post__wrap">
@@ -37,7 +36,7 @@ export default ({ data }) => {
             <article className="single">
               <h2>Description</h2>
               <div dangerouslySetInnerHTML={{ __html: post.content }} />
-              <Img fixed={fixed}></Img>
+              <Img fixed={fixed} alt="image"></Img>
               <div className="single__post__publish">
                 <img src={post.author.avatar_urls.wordpress_24} className="single__author__image"></img>
                 <div className="single__date__author">

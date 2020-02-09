@@ -31,7 +31,7 @@ export default ({ data }) => {
                   <Link to={node.slug}>
                     <div className="post__image-wrapper">
                       <div className="post__image">
-                        {fixed && <Img fixed={fixed} />}
+                        {fixed && <Img fixed={fixed} alt="post"/>}
                       </div>
                     </div>
                     <div className="post__content-wrapper">
@@ -40,7 +40,7 @@ export default ({ data }) => {
                         <div className="post__category">
                           {node.categories.map(({ name }) => {
                             return (
-                              <span>{name}</span>
+                              <span key={ name }>{name}</span>
                             )
                           })}
                         </div>
@@ -49,7 +49,7 @@ export default ({ data }) => {
                           <p className="post__date">{node.date}</p>
                           <p className="post__author">
                             <span className="author__name">{node.author.name}</span>
-                            <img src={node.author.avatar_urls.wordpress_24} className="author__image"></img>
+                            <img src={node.author.avatar_urls.wordpress_24} className="author__image" alt="avatar"></img>
                           </p>
                         </div>
                       </div>
